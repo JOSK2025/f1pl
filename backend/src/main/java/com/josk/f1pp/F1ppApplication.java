@@ -10,4 +10,14 @@ public class F1ppApplication {
 		SpringApplication.run(F1ppApplication.class, args);
 	}
 
+	@Bean
+	public WebMvcConfigurer corsConfigurer() {
+		return new WebMvcConfigurer() {
+			@Override
+			public void addCorsMappings(CorsRegistry registry) {
+				registry.addMapping("/").allowedOrigins("http://localhost:5173");
+			}
+		};
+	}
+
 }
