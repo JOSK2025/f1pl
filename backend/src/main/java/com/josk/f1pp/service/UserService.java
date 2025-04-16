@@ -14,12 +14,16 @@ import java.util.*;
 @Service
 public class UserService {
 
-    @Autowired
     private UserRepository userRepository;
-    @Autowired
     private RoleRepository roleRepository;
-    @Autowired
     private PasswordEncoder passwordEncoder;
+
+    @Autowired
+    public UserService(UserRepository userRepository, RoleRepository roleRepository, PasswordEncoder passwordEncoder) {
+        this.userRepository = userRepository;
+        this.roleRepository = roleRepository;
+        this.passwordEncoder = passwordEncoder;
+    }
 
     public Optional<UserEntity> findUserByUsername(String username) {
         return userRepository.findByUsername(username);
