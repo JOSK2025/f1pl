@@ -28,9 +28,8 @@ public class UserService {
     public Optional<UserEntity> findUserByUsername(String username) {
         return userRepository.findByUsername(username);
     }
-    public UserEntity findUserByEmail(String email) {
-        return userRepository.findByEmail(email);
-    }
+    public Optional<UserEntity> findUserByEmail(String email) {return userRepository.findUserByEmail(email);}
+    public UserEntity findByEmail(String email) {return userRepository.findByEmail(email);}
 
     public void registerUser(RegisterDto request) {
         UserEntity user = new UserEntity();
