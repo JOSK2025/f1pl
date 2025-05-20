@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { HomeIcon, UserPlusIcon, ArrowLeftOnRectangleIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import { HomeIcon, UserPlusIcon, ArrowLeftOnRectangleIcon, Bars3Icon, XMarkIcon, DocumentTextIcon } from "@heroicons/react/24/solid";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,9 +10,10 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    {to: "/", text: "Home", icon: <HomeIcon className="h-6 w-6" />},
-    {to: "/login", text: "Login", icon: <ArrowLeftOnRectangleIcon className="h-6 w-6" />},
-    {to: "/register", text: "Register", icon: <UserPlusIcon className="h-6 w-6" />}
+    {to: "/", text: "Strona główna", icon: <HomeIcon className="h-6 w-6" />},
+    {to: "/articles", text: "Artykuły", icon: <DocumentTextIcon className="h-6 w-6" />},
+    {to: "/login", text: "Logowanie", icon: <ArrowLeftOnRectangleIcon className="h-6 w-6" />},
+    {to: "/register", text: "Rejestracja", icon: <UserPlusIcon className="h-6 w-6" />}
   ];
 
   return (
