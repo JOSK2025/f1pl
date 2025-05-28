@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { HomeIcon, UserPlusIcon, ArrowLeftOnRectangleIcon, Bars3Icon, XMarkIcon, DocumentTextIcon } from "@heroicons/react/24/solid";
+import {useState} from "react";
+import {Link} from "react-router-dom";
+import {HomeIcon, UserPlusIcon, ArrowLeftOnRectangleIcon, Bars3Icon, XMarkIcon, DocumentTextIcon} from "@heroicons/react/24/solid";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,12 +18,14 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="hidden md:flex bg-red-800 text-stone-50 px-8 py-4 justify-between items-center">
-        <div className="text-xl font-bold text-stone-50">F1 Po Polsku</div>
+      <nav className="hidden md:flex bg-red-800 text-stone-50 px-8 py-4 justify-between items-center rounded-bl-lg rounded-br-lg">
+        <Link to="/" className="text-xl font-bold text-stone-50">
+          F1 Po Polsku
+        </Link>
         <ul className="flex space-x-4">
           {navLinks.map((link) => (
             <li key={link.to}>
-              <Link to={link.to} className="hover:bg-red-700 px-3 py-2 rounded-md">
+              <Link to={link.to} className="hover:bg-red-700 font-bold px-3 py-2 rounded-md">
                 <span>{link.text}</span>
               </Link>
             </li>
