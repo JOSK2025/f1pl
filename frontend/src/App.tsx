@@ -7,15 +7,17 @@ import Articles from "./pages/Articles.tsx";
 
 function App() {
     return (
-        <div className="min-h-screen bg-stone-50">
+        <div className="flex flex-col min-h-screen bg-stone-100">
             <Router>
                 <Navbar />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/register" element={<Register />} />
-                    <Route path="/articles" element={<Articles />} />
-                </Routes>
+                <main className="flex justify-center items-center flex-1 overflow-y-auto">
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/register" element={<Register />} />
+                        <Route path="/articles" element={<Articles />} />
+                    </Routes>
+                </main>
             </Router>
         </div>
   )

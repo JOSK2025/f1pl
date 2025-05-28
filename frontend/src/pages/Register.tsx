@@ -30,11 +30,11 @@ const Register = () => {
     }
 
     return (
-        <div className="min-h-screen flex justify-center items-center">
-            <form className="p-30 w-6/10 flex flex-col items-center gap-4" onSubmit={handleSubmit}>
-                <h2 className="">Rejestracja</h2>
+        <div className="h-full flex flex-1 justify-center items-center p-4">
+            <form className="p-6 w-full max-w-xl flex flex-col items-center gap-4 bg-stone-50 rounded-lg" onSubmit={handleSubmit}>
+                <h2 className="text-2xl font-semibold text-stone-950 mb-4">Rejestracja</h2>
                 <input
-                    className="w-full p-1 border-2 border-transparent rounded-sm bg-stone-200 focus:border-stone-800 focus:outline-none text-stone-950"
+                    className="w-full p-2 border border-gray-300 rounded-md focus:border-stone-800 focus:outline-none text-stone-950"
                     type="text"
                     name="username"
                     placeholder="Nazwa użytkownika"
@@ -42,7 +42,7 @@ const Register = () => {
                     onChange={handleChange}
                 />
                 <input
-                    className="w-full p-1 border-2 border-transparent rounded-sm bg-stone-200 focus:border-stone-800 focus:outline-none text-stone-950"
+                    className="w-full p-2 border border-gray-300 rounded-md focus:border-stone-800 focus:outline-none text-stone-950"
                     type="email"
                     name="email"
                     placeholder="Email"
@@ -50,14 +50,14 @@ const Register = () => {
                     onChange={handleChange}
                 />
                 <input
-                    className="w-full p-1 border-2 border-transparent rounded-sm bg-stone-200 focus:border-stone-800 focus:outline-none text-stone-950"
+                    className="w-full p-2 border border-gray-300 rounded-md focus:border-stone-800 focus:outline-none text-stone-950"
                     type="password"
                     name="password"
                     placeholder="Hasło"
                     value={formData.password}
                     onChange={handleChange}
                 />
-                <button type="submit" className="cursor-pointer bg-red-800 text-stone-50 self-end p-1.5 rounded-sm">Zarejestruj</button>
+                <button type="submit" className="cursor-pointer bg-red-800 text-stone-50 self-end p-2 rounded-md hover:bg-red-700 transition-colors">Zarejestruj</button>
             </form>
         </div>
     );
