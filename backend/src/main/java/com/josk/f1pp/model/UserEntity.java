@@ -24,7 +24,7 @@ public class UserEntity {
     private String email;
 
     @CreationTimestamp
-    private LocalDateTime createdOn;
+    private LocalDateTime createdAt;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(
