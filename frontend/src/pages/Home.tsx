@@ -1,7 +1,9 @@
 const Home = () => {
     return (
         <div>
-            home page
+            <img
+                src="/oficjalnyjk.gif"
+            />
         </div>
     );
 };
