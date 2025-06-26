@@ -16,13 +16,13 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ id, title, content, imageUrl 
           <img
             src={imageUrl}
             alt={title}
-            className="w-full h-36 object-fill rounded-lg"
+            className="w-full h-30 sm:h-36 md:h-48 object-fill rounded-lg"
           />
         </div>
       )}
       <div className="flex-grow">
         <h2 className="lg:text-xl text-base font-semibold text-gray-800 mb-2">{title}</h2>
-        <p className="text-gray-600 lg:text-sm text-xs line-clamp-3">
+        <p className="text-gray-600 md:text-sm hidden md:line-clamp-3">
           {content}
         </p>
       </div>
