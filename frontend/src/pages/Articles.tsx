@@ -46,7 +46,12 @@ const Articles: React.FC = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">Artykuły</h1>
+      <h1 className="text-3xl font-bold text-center text-gray-800">Artykuły</h1>
+      <input
+          type="text"
+          placeholder="Szukaj artykułów po tytule lub treści..."
+          className="w-full p-3 my-4 bg-white border border-gray-300 rounded-md focus:border-stone-800 focus:outline-none text-stone-950"
+      />
       <div className="flex flex-col gap-6">
         {articles.map(article => (
           <ArticleCard
